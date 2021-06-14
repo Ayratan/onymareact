@@ -22,7 +22,7 @@ const PaginaInicial =  () => {
       <Header texto= "Visualizador de Clínicas"/>
       
       {clinicas.map((clinica) => (
-        <ClinicasEstrutura clinica={clinica}/>
+        <ClinicasEstrutura clinica={clinica} key={clinica.id}/>
       ))}
     
       <Footer texto="Fim da Página" />
