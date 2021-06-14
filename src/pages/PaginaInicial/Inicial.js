@@ -1,12 +1,8 @@
-import React from "react"
-import './App.css';
-import ClinicasEstrutura from "./components/Clinicas/Estrutura";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-
-const App = () =>{
-
-  const clinica = [{
+import React from 'react';
+import ClinicasEstrutura from '../../components/Clinicas/Estrutura';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+const clinica = [{
     "id" : 1,
     "nome": "EHS Soluções Inteligentes",
     "endereço": "Rua Barão do Triunfo,612/ CJ901",
@@ -127,11 +123,8 @@ const App = () =>{
   "PCMSO" : true,
 }]
 
-
-
-  return (
-    <div className="App" 
-    >
+const PaginaInicial =  () => {
+    return <div>
       <Header texto= "Visualizador de Clínicas"/>
       <ClinicasEstrutura clinica={clinica[0]}/>
       <ClinicasEstrutura clinica={clinica[1]}/>
@@ -144,9 +137,7 @@ const App = () =>{
       <ClinicasEstrutura clinica={clinica[8]}/>
       <ClinicasEstrutura clinica={clinica[9]}/>
       <Footer texto="Fim da Página" />
-
     </div>
-  );
 }
 
-export default App;
+export default PaginaInicial;
