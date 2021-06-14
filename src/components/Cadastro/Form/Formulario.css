@@ -1,0 +1,27 @@
+body{
+    width: 800px;
+    margin: auto;
+  
+
+}
+.cadastro-formulario__grupo {
+    display: flex;
+    flex-direction:  column;
+    margin-bottom: 15px;
+}
+
+
+.cadastro-formulario__grupo label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555
+}
+
+.cadastro-formulario__grupo input{
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    height: 24px;
+    padding: 0 10px;
+
+}
