@@ -1,5 +1,7 @@
 import React, {useState} from "react"
 import './Formulario.css'
+import axios from 'axios'
+import { useHistory } from "react-router"
 
 const initialValue = {
     nome: '',
@@ -14,9 +16,16 @@ const initialValue = {
 }
 const CadastroFormulario = () => {
     const [values,setValues] = useState(initialValue);
+    const history = useHistory();
+
     
 function onSubmit(ev){
     ev.preventDefault();
+
+    axios.post('http://localhost:5000/clinicas', values)
+    .then((response) => {
+     history.push('/');
+    })
 }  
 
 function onChange(ev) {
@@ -24,29 +33,15 @@ function onChange(ev) {
     
         setValues({...values, [name]: value})
     }
+    console.log(values)
 
     return (
       
-       //     "id" : 1,
-     //      "nome": "EHS Soluções Inteligentes",
-       //     "endereço": "Rua Barão do Triunfo,612/ CJ901",
-       //    "cep": "04602-002",
-       //     "email": "contato@ehsss.com.br",
-      //     "whatsapp": "(11) 93477-9755",
-       //       "exclin": true,
-       //      "excomp" : true,
-        //      "PPRA" : true,
-        //     "PCMSO" : true,
-         
-
-
-        <div>
-            <h1>Cadastro Clinicas</h1>
-            <h2>Nova Clínica</h2>
-
-
+        <div className="pagina_formulario">
+           
             <form onSubmit={onSubmit}>
                 <div className="cadastro-formulario__grupo">
+                    <h1>Nova Clínica</h1>
                     <label htmlFor="nome">Nome </label>
                     <input id="nome" name="nome" onChange={onChange} ></input>
                     <label htmlFor="endereço">Endereço </label>
@@ -57,17 +52,36 @@ function onChange(ev) {
                     <input type="email" id="email" name="email"onChange={onChange} ></input>
                     <label htmlFor="whatsapp">Whatsapp </label>
                     <input id="whatsapp" name="whatsapp" onChange={onChange}></input>
-                    <div className="cadastro-formulario__exames">
-                        Exame Clínico
-                        <label htmlFor="exclin"></label>
-                        <input type="radio" value="" name="exclins"onChange={onChange}></input> 
+
+                    <div className="cadastro-formulario__radios">
+                    <label>Exame Clínicos: </label>
+                    <label htmlFor="exclin"><input type="radio"id="exclin" name="exclin" value="true" onChange={onChange}></input>Sim</label>
+                    <label htmlFor="exclin"><input type="radio"id="exclin" name="exclin" value="false" onChange={onChange}></input>Não</label>
                     </div>
+
+                    <div className="cadastro-formulario__radios">
+                    <label>Exame Complementar: </label>
+                    <label htmlFor="excomp"><input type="radio"id="excomp" name="excomp" value="true" onChange={onChange}></input>Sim</label>
+                    <label htmlFor="excomp"><input type="radio"id="excomp" name="excomp" value="false" onChange={onChange}></input>Não</label>
+                    </div>
+                    <div className="cadastro-formulario__radios">
+                    <label>PPRA: </label>
+                    <label htmlFor="PPRA"> <input type="radio"id="PPRA" name="PPRA" value="true" onChange={onChange}></input>Sim</label>
+                    <label htmlFor="PPRA"><input type="radio"id="PPRA" name="PPRA" value="false" onChange={onChange}></input>Não</label>
+                    </div>
+                    <div className="cadastro-formulario__radios">
+                    <label>PCMSO: </label>
+                    <label htmlFor="PCMSO"> <input type="radio"id="PCMSO" name="PCMSO" value="true" onChange={onChange}></input>Sim</label>
+                    <label htmlFor="PCMSO"><input type="radio"id="PCMSO" name="PCMSO" value="false" onChange={onChange}></input>Não</label>
+                    </div>
+                  
                     <div>
                         <button type="submit">Cadastrar Clínica</button>
                     </div>
                 </div>
                 
             </form>
+           
         </div>
     )
 }

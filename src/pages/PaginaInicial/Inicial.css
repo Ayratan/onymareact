@@ -1,0 +1,11 @@
+.inputs_visualizador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+.clinica_pesquisa__input {
+    padding: 5px;
+}
+

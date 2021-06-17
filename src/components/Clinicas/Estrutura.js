@@ -16,16 +16,16 @@ const ClinicasEstrutura = ({clinica}) => (
          </div>
          </div>
         <div className="estrutura-clinica__exames">
-            {clinica.exclin === true &&(
+            {(clinica.exclin == true || clinica.exclin =="true") &&(
                 <li>Exame Clínico</li>
             )}
-            {clinica.excomp === true &&(
+            {(clinica.excomp === true || clinica.excomp =="true") &&(
                 <li>Exame Complementar</li>
             )}
-            {clinica.PPRA === true &&(
+            {(clinica.PPRA === true || clinica.PPRA == "true") &&(
                 <li>PPRA</li>
             )}
-            {clinica.PCMSO === true &&(
+            {(clinica.PCMSO === true || clinica.PCMSO == "true") &&(
                 <li>PCMSO</li>
             )}
             
