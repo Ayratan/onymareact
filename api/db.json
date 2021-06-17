@@ -119,42 +119,6 @@
       "excomp": false,
       "PPRA": true,
       "PCMSO": true
-    },
-    {
-      "nome": "Teste",
-      "endereço": "Teste",
-      "cep": "Teste",
-      "email": "Teeste@gmail.com",
-      "whatsapp": "Teste",
-      "exclin": "true",
-      "excomp": "true",
-      "PPRA": false,
-      "PCMSO": "true",
-      "id": 11
-    },
-    {
-      "nome": "Clinica Teste",
-      "endereço": "Endereço Teste",
-      "cep": "Cep Teste",
-      "email": "EmailTeste@gmail.com",
-      "whatsapp": "(12) 91144123",
-      "exclin": "false",
-      "excomp": "true",
-      "PPRA": "false",
-      "PCMSO": "true",
-      "id": 12
-    },
-    {
-      "nome": "Teste3",
-      "endereço": "Teste3",
-      "cep": "teste3",
-      "email": "teste@gmail.com",
-      "whatsapp": "(12)941241-312312",
-      "exclin": "true",
-      "excomp": "true",
-      "PPRA": "false",
-      "PCMSO": "true",
-      "id": 13
     }
   ]
 }

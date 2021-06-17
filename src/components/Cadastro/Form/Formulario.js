@@ -43,15 +43,15 @@ function onChange(ev) {
                 <div className="cadastro-formulario__grupo">
                     <h1>Nova Clínica</h1>
                     <label htmlFor="nome">Nome </label>
-                    <input id="nome" name="nome" onChange={onChange} ></input>
+                    <input id="nome" name="nome" onChange={onChange} required='true' ></input>
                     <label htmlFor="endereço">Endereço </label>
-                    <input id="endereço" name="endereço" onChange={onChange}></input>
+                    <input id="endereço" name="endereço" onChange={onChange} required='true'></input>
                     <label htmlFor="cep" >CEP </label>
-                    <input id="cep" name="cep" onChange={onChange}></input>
+                    <input id="cep" name="cep" onChange={onChange} required='true'></input>
                     <label htmlFor="email">Email </label>
-                    <input type="email" id="email" name="email"onChange={onChange} ></input>
+                    <input type="email" id="email" name="email"onChange={onChange} required='true' ></input>
                     <label htmlFor="whatsapp">Whatsapp </label>
-                    <input id="whatsapp" name="whatsapp" onChange={onChange}></input>
+                    <input id="whatsapp" name="whatsapp" onChange={onChange} required='true'></input>
 
                     <div className="cadastro-formulario__radios">
                     <label>Exame Clínicos: </label>
